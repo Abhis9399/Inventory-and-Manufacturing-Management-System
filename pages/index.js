@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import ordersData from '../data.json';
+import Link from 'next/link';
 
 export default function OrderList() {
   const [orders, setOrders] = useState([]);
@@ -89,6 +90,12 @@ export default function OrderList() {
             </li>
           ))}
         </ul>
+
+        <Link href="/inventory">
+        <button className=" bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 my-2 rounded">
+          Inventory Management
+        </button>
+      </Link>
 
         {/* Pagination Controls */}
         <div className="mt-6 flex justify-center">
